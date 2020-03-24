@@ -1,0 +1,49 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.7;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	font-weight: 700;
+}
+
+nav i {
+	vertical-align: middle;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+
+input,
+textarea:focus {
+	outline: 0;
+}
+
+button:focus {
+	cursor: pointer;
+	outline: 0 !important;
+}
+
+li {
+	list-style: none;
+}
