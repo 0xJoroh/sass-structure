@@ -35,3 +35,37 @@
 		transform: translate(-50%, -50%) scale(0);
 	}
 }
+
+@mixin demo-typography() {
+	* {
+	  font-family: 'Montserrat', sans-serif;
+	  font-style: normal;
+	  font-weight: normal;
+	}
+	h1, h2, h3, h4, h5, p, b, strong, i, em, mark, small, del, ins, sub, sup {
+	  color: $dark-grey;
+	}
+	h1 {
+	  font-weight: bold;
+	  font-size: 3rem;
+	  line-height: 4rem;
+	}
+	p, b, strong, i, em, mark, del, ins {
+	  font-size: 1.2rem;
+	  line-height: 2rem;
+	}
+	.small-typography {
+	  h1 {
+		font-size: 3.1rem;
+		line-height: 2.6rem;
+	  }
+	  h2 {
+		font-size: 2rem;
+		line-height: 2.7rem;
+	  }
+	  p, b, strong, i, em, mark, del, ins {
+		font-size: 1rem;
+		line-height: 2rem;
+	  }
+	}
+  }
