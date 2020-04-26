@@ -1,0 +1,37 @@
+@mixin for-size($size) {
+	@if $size == phone-only {
+		@media (max-width: 599px) { @content; }
+	}@else if $size == tablet-portrait-up {
+		@media (max-width: 720px) { @content; }
+	}@else if $size == tablet-landscape-up {
+		@media (max-width: 991px) { @content; }
+	}@else if $size == desktop-up {
+		@media (max-width: 1200px) { @content; }
+	}@else if $size == big-desktop-up {
+		@media (max-width: 1800px) { @content; }
+	}
+}
+
+@mixin ripple-effect{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: $background;
+		padding: 50%;
+		border-radius: 50%;
+		left: calc(100% * var(--ripple-x));
+		top: calc(100% * var(--ripple-y));
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+		transition: transform 600ms, opacity 600ms;
+	}
+	&:active::before {
+		transition: 0s;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
