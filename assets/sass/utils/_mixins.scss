@@ -1,18 +1,28 @@
 @mixin for-size($size) {
 	@if $size == phone-only {
-		@media (max-width: 599px) { @content; }
-	}@else if $size == tablet-portrait-up {
-		@media (max-width: 720px) { @content; }
-	}@else if $size == tablet-landscape-up {
-		@media (max-width: 991px) { @content; }
-	}@else if $size == desktop-up {
-		@media (max-width: 1200px) { @content; }
-	}@else if $size == big-desktop-up {
-		@media (max-width: 1800px) { @content; }
+		@media (max-width: 599px) {
+			@content;
+		}
+	} @else if $size == tablet-portrait-up {
+		@media (max-width: 720px) {
+			@content;
+		}
+	} @else if $size == tablet-landscape-up {
+		@media (max-width: 991px) {
+			@content;
+		}
+	} @else if $size == desktop-up {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	} @else if $size == big-desktop-up {
+		@media (max-width: 1800px) {
+			@content;
+		}
 	}
 }
 
-@mixin ripple-effect{
+@mixin ripple-effect {
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
@@ -38,34 +48,118 @@
 
 @mixin demo-typography() {
 	* {
-	  font-family: 'Montserrat', sans-serif;
-	  font-style: normal;
-	  font-weight: normal;
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: normal;
 	}
-	h1, h2, h3, h4, h5, p, b, strong, i, em, mark, small, del, ins, sub, sup {
-	  color: $dark-grey;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	b,
+	strong,
+	i,
+	em,
+	mark,
+	small,
+	del,
+	ins,
+	sub,
+	sup {
+		color: $dark-grey;
 	}
 	h1 {
-	  font-weight: bold;
-	  font-size: 3rem;
-	  line-height: 4rem;
+		font-weight: bold;
+		font-size: 3rem;
+		line-height: 4rem;
 	}
-	p, b, strong, i, em, mark, del, ins {
-	  font-size: 1.2rem;
-	  line-height: 2rem;
+	p,
+	b,
+	strong,
+	i,
+	em,
+	mark,
+	del,
+	ins {
+		font-size: 1.2rem;
+		line-height: 2rem;
 	}
 	.small-typography {
-	  h1 {
-		font-size: 3.1rem;
-		line-height: 2.6rem;
-	  }
-	  h2 {
-		font-size: 2rem;
-		line-height: 2.7rem;
-	  }
-	  p, b, strong, i, em, mark, del, ins {
-		font-size: 1rem;
-		line-height: 2rem;
-	  }
+		h1 {
+			font-size: 3.1rem;
+			line-height: 2.6rem;
+		}
+		h2 {
+			font-size: 2rem;
+			line-height: 2.7rem;
+		}
+		p,
+		b,
+		strong,
+		i,
+		em,
+		mark,
+		del,
+		ins {
+			font-size: 1rem;
+			line-height: 2rem;
+		}
 	}
-  }
+}
+
+@mixin flex($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin font-source-sans($font: false, $size: false, $color: false, $weight: false, $lh: false) {
+	@if $font{font-family: $font;}
+	@if $size {font-size: $size;}
+	@if $color {color: $color;}
+	@if $weight {font-weight: $weight;}
+	@if $lh{line-height: $lh;}
+}
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin font-face($name, $style, $weight, $display, $path){
+	@font-face {
+		font-family: $name;
+		font-style: $style;
+		font-weight: $weight;
+		font-display: $display;
+		src: url($path+".eot");
+		src: url($path+".eot?#iefix") format("embedded-opentype"),
+			url($path+".woff2") format("woff2"),
+			url($path+".woff") format("woff"),
+			url($path+".ttf") format("truetype"),
+			url($path+".svg#fontawesome") format("svg");
+	}
+}
+
+@mixin cover-background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin fade($type) {
+	@if $type== "hide" {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+	} @else if $type== "show" {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+	}
+}
