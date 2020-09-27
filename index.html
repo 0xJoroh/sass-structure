@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" dir="ltr" lang="en">
-<!--<![endif]-->
+<html dir="ltr" lang="en">
 
 <head>
 	<title>Page Title</title>
@@ -25,34 +20,89 @@
 
 	<!-- Favicon
 	================================================== -->
-	<link rel="shortcut icon" href="">
+	<link rel="shortcut icon" href="./assets/img/favicon/favicon.ico">
 
-	<!-- JavaScript
-	================================================== -->
-	<!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-		<![endif]-->
 
-	<!-- Modernizer Script for old Browsers -->
-	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script-->
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
+		div,
+		form {
+			border: 5px solid black;
+			border-radius: 5px;
+			padding: 20px;
+			margin-bottom: 30px;
+		}
+
+		.headings {}
+
+		.paragraphes {}
+
+		.links {}
+
+		.buttons {}
+
+		.forms {}
+	</style>
 </head>
 
 <body>
+
+	<div class="headings">
+		<h1>H1 heading</h1>
+		<h2>H2 heading</h2>
+		<h3>H3 heading</h3>
+		<h4>H4 heading</h4>
+		<h5>H5 heading</h5>
+		<h6>H6 heading</h6>
+	</div>
+
+	<div class="paragraphes">
+		<p>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tempore at? Quidem deserunt minima dolor
+			possimus
+			corrupti eos harum voluptatibus cumque voluptate, ea non nihil enim veniam facilis cum eum?Cum et provident
+			quod
+			vel sit dolores, totam illo soluta, cumque vitae omnis. Quae corporis necessitatibus voluptates fugit
+			pariatur
+			perferendis maiores, ut facere iste praesentium rem ipsum voluptate doloremque dolorem!
+		</p>
+	</div>
+
+	<div class="links">
+		<a href="#">simple Link</a>
+		<a href="#" class="nav-link">nav link</a>
+	</div>
+
+	<div class="buttons">
+		<a href="#" class="button">anchor Button</a>
+		<button class="button">Button</button>
+	</div>
+
+	<form class="forms">
+		<label>Label 1</label>
+		<input type="text" placeholder="Text here ...">
+		<br>
+		<label>Label 2</label>
+		<textarea rows="6" placeholder="Text here ..."></textarea>
+	</form>
 
 	<!-- Plugins
 	================================================== -->
 
 	<!-- jQuery -->
-	<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
 	<!-- PooperJS -->
-	<script src="assets/js/popper.min.js"></script>
+	<script src="./assets/js/popper.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<!-- bootstrap-better-nav -->
-	<script src="assets/js/bootstrap-better-nav.min.js"></script>
+	<script src="./assets/js/bootstrap.min.js"></script>
 	<!-- Application -->
-	<script src="assets/js/main.js"></script>
+	<script src="./assets/js/main.js"></script>
 </body>
 
 </html>

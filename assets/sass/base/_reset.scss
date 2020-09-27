@@ -3,8 +3,6 @@
 	padding: 0px;
 	box-sizing: border-box;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 
@@ -22,10 +20,7 @@ html {
 }
 
 body {
-	font-size: 16px;
-	line-height: 100%;
 	overflow-x: hidden;
-	max-width: 300px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -59,14 +54,28 @@ i {
 
 a,
 a:visited {
-	text-decoration: none;
 	cursor: pointer;
+	transition: color 300ms ease-in-out;
+
 	&:focus {
 		outline: thin dotted;
 	}
 	&:active,
 	&:hover {
 		outline: 0;
+		text-decoration: none;
+		transition: color 300ms ease-in-out;
+	}
+}
+
+svg {
+	path {
+		transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+	}
+	&:hover {
+		path {
+			transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+		}
 	}
 }
 

@@ -1,31 +1,90 @@
-/*=== Import Fontawesome Pro ===*/
-@include font-face("Fontawesome-Brands", normal, normal, auto, "../fonts/fontawsome-pro/fa-brands-400");
-@include font-face("Fontawesome-light", normal, 300, auto, "../fonts/fontawsome-pro/fa-light-300");
-@include font-face("Fontawesome-regular", normal, 400, auto, "../fonts/fontawsome-pro/fa-regular-400");
-@include font-face("Fontawesome-solid", normal, 900, auto, "../fonts/fontawsome-pro/fa-solid-900");
+/*=== Import Fonts ===*/
+@include font-face($primary-light, $primary-light-path);
+@include font-face($primary-regular, $primary-regular-path);
+@include font-face($primary-medium, $primary-medium-path);
+@include font-face($primary-semibold, $primary-semibold-path);
+@include font-face($primary-bold, $primary-bold-path);
+
+@include font-face($secondary-light, $secondary-light-path);
+@include font-face($secondary-regular, $secondary-regular-path);
+@include font-face($secondary-medium, $secondary-medium-path);
+@include font-face($secondary-semibold, $secondary-semibold-path);
+@include font-face($secondary-bold, $secondary-bold-path);
 
 /*=== Typography Styling ===*/
-
-* {
-	font-family: "Montserrat", sans-serif;
+body {
+	// color: $dark-1;
+	// font-size: $size-small;
+	// font-family: $primary-regular, sans-serif;
 	font-style: normal;
 	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	// line-height: 1.5;
 }
 
-.title {
+h1 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
-.sub-title {
+h2 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
-.caption {
+h3 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+}
+h4 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+}
+h5 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+}
+h6 {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
 button {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
+
 a {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
+
 p {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
-span {
-}
+
 label {
+	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+}
+
+@include for-size(phone-only) {
+	h1 {
+		// font-size: ;
+		// line-height: ;
+	}
+	h2 {
+		// font-size: ;
+		// line-height: ;
+	}
+	h3 {
+		// font-size: ;
+		// line-height: ;
+	}
+	h4 {
+		// font-size: ;
+		// line-height: ;
+	}
+	h5 {
+		// font-size: ;
+		// line-height: ;
+	}
+	h6 {
+		// font-size: ;
+		// line-height: ;
+	}
+	p {
+		// font-size: ;
+		// line-height: ;
+	}
 }
