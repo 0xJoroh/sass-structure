@@ -27,8 +27,8 @@ $font-size-lg: ;
 $font-size-xl: ;
 
 // Font Names
-$primary-font: "";
-$secondary-font: "";
+$font-primary: "";
+$font-secondary: "";
 
 //==================================//
 // Don't miss with those variabeles //
@@ -41,31 +41,31 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // Black & White
-$black: #000000;
-$white: #ffffff;
+$color-black: #000000;
+$color-white: #ffffff;
 
 //Font Path
-$primary-light-path: "../fonts/" + $primary-font + "/" + $primary-font + "-Light.ttf";
-$primary-regular-path: "../fonts/" + $primary-font + "/" + $primary-font + "-Regular.ttf";
-$primary-medium-path: "../fonts/" + $primary-font + "/" + $primary-font + "-Medium.ttf";
-$primary-semibold-path: "../fonts/" + $primary-font + "/" + $primary-font + "-Semibold.ttf";
-$primary-bold-path: "../fonts/" + $primary-font + "/" + $primary-font + "-Bold.ttf";
+$font-primary-light-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Light.ttf";
+$font-primary-regular-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Regular.ttf";
+$font-primary-medium-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Medium.ttf";
+$font-primary-semibold-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Semibold.ttf";
+$font-primary-bold-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Bold.ttf";
 
-$secondary-light-path: "../fonts/" + $secondary-font + "/" + $secondary-font + "-Light.ttf";
-$secondary-regular-path: "../fonts/" + $secondary-font + "/" + $secondary-font + "-Regular.ttf";
-$secondary-medium-path: "../fonts/" + $secondary-font + "/" + $secondary-font + "-Medium.ttf";
-$secondary-semibold-path: "../fonts/" + $secondary-font + "/" + $secondary-font + "-Semibold.ttf";
-$secondary-bold-path: "../fonts/" + $secondary-font + "/" + $secondary-font + "-Bold.ttf";
+$font-secondary-light-path: "../fonts/" + $font-secondary + "/" + $font-secondary + "-Light.ttf";
+$font-secondary-regular-path: "../fonts/" + $font-secondary + "/" + $font-secondary + "-Regular.ttf";
+$font-secondary-medium-path: "../fonts/" + $font-secondary + "/" + $font-secondary + "-Medium.ttf";
+$font-secondary-semibold-path: "../fonts/" + $font-secondary + "/" + $font-secondary + "-Semibold.ttf";
+$font-secondary-bold-path: "../fonts/" + $font-secondary + "/" + $font-secondary + "-Bold.ttf";
 
 //Font Family
-$font-primary-light: $primary-font + " Light";
-$font-primary-regular: $primary-font + " Regular";
-$font-primary-medium: $primary-font + " Medium";
-$font-primary-semibold: $primary-font + " SemiBold";
-$font-primary-bold: $primary-font + " Bold";
+$font-primary-light: $font-primary + " Light";
+$font-primary-regular: $font-primary + " Regular";
+$font-primary-medium: $font-primary + " Medium";
+$font-primary-semibold: $font-primary + " SemiBold";
+$font-primary-bold: $font-primary + " Bold";
 
-$font-secondary-light: $secondary-font + " Light";
-$font-secondary-regular: $secondary-font + " Regular";
-$font-secondary-medium: $secondary-font + " Medium";
-$font-secondary-semibold: $secondary-font + " SemiBold";
-$font-secondary-bold: $secondary-font + " Bold";
+$font-secondary-light: $font-secondary + " Light";
+$font-secondary-regular: $font-secondary + " Regular";
+$font-secondary-medium: $font-secondary + " Medium";
+$font-secondary-semibold: $font-secondary + " SemiBold";
+$font-secondary-bold: $font-secondary + " Bold";

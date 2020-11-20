@@ -1,3 +1,4 @@
+// Media Query
 @mixin for-size($size) {
 	@if $size == phone-only {
 		@media (max-width: $breakpoint-sm) {
@@ -23,29 +24,33 @@
 }
 
 // Ripple effect for buttons
-// @mixin ripple-effect {
-// 	display: inline-block;
-// 	position: relative;
-// 	overflow: hidden;
+@mixin ripple-effect {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
 
-// 	&::before {
-// 		content: "";
-// 		position: absolute;
-// 		background-color: $background;
-// 		padding: 50%;
-// 		border-radius: 50%;
-// 		left: calc(100% * var(--ripple-x));
-// 		top: calc(100% * var(--ripple-y));
-// 		transform: translate(-50%, -50%) scale(1);
-// 		opacity: 0;
-// 		transition: transform 600ms, opacity 600ms;
-// 	}
-// 	&:active::before {
-// 		transition: 0s;
-// 		opacity: 1;
-// 		transform: translate(-50%, -50%) scale(0);
-// 	}
-// }
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: $background;
+		padding: 50%;
+		border-radius: 50%;
+		left: 50%;
+		top: 50%;
+		// Detect clicked poinnt with js
+		// left: calc(100% * var(--ripple-x));
+		// top: calc(100% * var(--ripple-y));
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+		transition: transform 600ms, opacity 600ms;
+		pointer-events: none;
+	}
+	&:active::before {
+		transition: 0s;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
 
 // Flexbox
 @mixin flex($justify, $align) {
@@ -54,6 +59,7 @@
 	align-items: $align;
 }
 
+// Set Font
 @mixin font-source-sans($font: false, $size: false, $color: false, $weight: false, $lh: false) {
 	@if $font {
 		font-family: $font;
@@ -72,6 +78,7 @@
 	}
 }
 
+// Placeholder styling
 @mixin input-placeholder {
 	&.placeholder {
 		@content;
@@ -93,6 +100,7 @@
 	}
 }
 
+// Import fonts
 @mixin font-face($family, $ttf-path) {
 	@font-face {
 		font-family: $family;
@@ -100,14 +108,17 @@
 	}
 }
 
-// @mixin fade($type) {
-// 	@if $type== "hide" {
-// 		visibility: hidden;
-// 		opacity: 0;
-// 		transition: visibility 1s, opacity 1s;
-// 	} @else if $type== "show" {
-// 		visibility: visible;
-// 		opacity: 1;
-// 		transition: visibility 1s, opacity 1s;
-// 	}
-// }
+// Show and hide an element
+@mixin fade($type) {
+	@if $type== "hide" {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+		pointer-events: none;
+	} @else if $type== "show" {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+		pointer-events: all;
+	}
+}

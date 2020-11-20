@@ -1,21 +1,21 @@
 /*=== Import Fonts ===*/
-@include font-face($primary-light, $primary-light-path);
-@include font-face($primary-regular, $primary-regular-path);
-@include font-face($primary-medium, $primary-medium-path);
-@include font-face($primary-semibold, $primary-semibold-path);
-@include font-face($primary-bold, $primary-bold-path);
+@include font-face($font-primary-light, $font-primary-light-path);
+@include font-face($font-primary-regular, $font-primary-regular-path);
+@include font-face($font-primary-medium, $font-primary-medium-path);
+@include font-face($font-primary-semibold, $font-primary-semibold-path);
+@include font-face($font-primary-bold, $font-primary-bold-path);
 
-@include font-face($secondary-light, $secondary-light-path);
-@include font-face($secondary-regular, $secondary-regular-path);
-@include font-face($secondary-medium, $secondary-medium-path);
-@include font-face($secondary-semibold, $secondary-semibold-path);
-@include font-face($secondary-bold, $secondary-bold-path);
+@include font-face($font-secondary-light, $font-secondary-light-path);
+@include font-face($font-secondary-regular, $font-secondary-regular-path);
+@include font-face($font-secondary-medium, $font-secondary-medium-path);
+@include font-face($font-secondary-semibold, $font-secondary-semibold-path);
+@include font-face($font-secondary-bold, $font-secondary-bold-path);
 
 /*=== Typography Styling ===*/
 body {
 	// color: $dark-1;
 	// font-size: $size-small;
-	// font-family: $primary-regular, sans-serif;
+	// font-family: $font-primary-regular, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-stretch: normal;
@@ -24,40 +24,41 @@ body {
 }
 
 h1 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 h2 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 h3 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 h4 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 h5 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 h6 {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
 button {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
 a {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
 p {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
 label {
-	// @include font-source-sans($primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
 }
 
+// How typogrraphy should looks like on mobile version
 @include for-size(phone-only) {
 	h1 {
 		// font-size: ;
