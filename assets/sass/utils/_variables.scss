@@ -1,22 +1,9 @@
-// Primary Color
-$color-primary-1: ;
-$color-primary-2: ;
-$color-primary-3: ;
-$color-primary-4: ;
-$color-primary-5: ;
+// Colors
+$color-primary: ;
+$color-secondary: ;
 
-// Secondary Color
-$color-secondary-1: ;
-$color-secondary-2: ;
-$color-secondary-3: ;
-$color-secondary-4: ;
-$color-secondary-5: ;
-
-//Shadow
-$shadow-1: ;
-
-//Shadow Hover
-$shadow-hover-1: ;
+//Shadows
+$shadow-sm: ;
 
 //Font sizes
 $font-size-xs: ;
@@ -35,10 +22,7 @@ $font-secondary: "";
 //==================================//
 
 // Breakpoint
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$breakpoints: ("xs": 360px, "sm": 576px, "md":768px, "lg":992px, "xl":1200px);
 
 // Black & White
 $color-black: #000000;

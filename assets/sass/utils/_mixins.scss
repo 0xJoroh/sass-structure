@@ -1,37 +1,28 @@
-// Media Query
-@mixin for-size($size) {
-	@if $size == phone-only {
-		@media (max-width: $breakpoint-sm) {
-			@content;
-		}
-	} @else if $size == tablet-portrait-down {
-		@media (max-width: $breakpoint-md) {
-			@content;
-		}
-	} @else if $size == tablet-landscape-down {
-		@media (max-width: $breakpoint-lg) {
-			@content;
-		}
-	} @else if $size == desktop-down {
-		@media (max-width: $breakpoint-xl) {
-			@content;
-		}
-	} @else if $size == desktop-up {
-		@media (min-width: $breakpoint-xl) {
-			@content;
-		}
+// Media Query (xs, sm, md, lg, xl)
+@mixin mq($key) {
+	$size: map-get($breakpoints, $key);
+	@media only screen and (max-width: $size) {
+		@content;
+	}
+}
+
+// Pseudo-elements
+@mixin pseudo($loc: before, $content: "", $position: absolute) {
+	position: relative;
+
+	&::#{$loc} {
+		content: $content;
+		position: $position;
+		@content;
 	}
 }
 
 // Ripple effect for buttons
 @mixin ripple-effect {
 	display: inline-block;
-	position: relative;
 	overflow: hidden;
 
-	&::before {
-		content: "";
-		position: absolute;
+	@include pseudo($loc: before) {
 		background-color: $background;
 		padding: 50%;
 		border-radius: 50%;
@@ -45,6 +36,7 @@
 		transition: transform 600ms, opacity 600ms;
 		pointer-events: none;
 	}
+
 	&:active::before {
 		transition: 0s;
 		opacity: 1;
@@ -80,21 +72,11 @@
 
 // Placeholder styling
 @mixin input-placeholder {
-	&.placeholder {
-		@content;
-	}
-	&::placeholder {
-		@content;
-	}
-	&:-moz-placeholder {
-		@content;
-	}
-	&::-moz-placeholder {
-		@content;
-	}
-	&:-ms-input-placeholder {
-		@content;
-	}
+	&.placeholder,
+	&::placeholder,
+	&:-moz-placeholder,
+	&::-moz-placeholder,
+	&:-ms-input-placeholder,
 	&::-webkit-input-placeholder {
 		@content;
 	}
