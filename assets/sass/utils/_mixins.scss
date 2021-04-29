@@ -104,3 +104,10 @@
 		pointer-events: all;
 	}
 }
+
+// Gap
+@mixin gap($value) {
+   &>&:not(last-child){
+	margin-right: $value;
+   }
+}
