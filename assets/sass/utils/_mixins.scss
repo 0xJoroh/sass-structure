@@ -106,8 +106,40 @@
 }
 
 // Gap
-@mixin gap($value) {
-   &>&:not(last-child){
-	margin-right: $value;
-   }
+@mixin gap($value, $direction: "row") {
+	@if $direction == "row" {
+		& > *:not(last-child) {
+			margin-right: $value;
+		}
+	} @else if $direction == "column" {
+		& > *:not(last-child) {
+			margin-bottom: $value;
+		}
+	}
+}
+
+// For Text gradient colos
+@mixin text-gradient($color-gradient){
+	background: $color-gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// Hide Scroolbar
+@mixin hideScroller {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+// Text limit Overflow (3 points)
+@mixin lines-limit($lines, $line-hight){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines; // number of lines to show
+	-webkit-box-orient: vertical;
+	line-height: $line-hight;
 }
